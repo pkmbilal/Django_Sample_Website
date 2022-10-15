@@ -1,0 +1,195 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+
+/* Fonts */
+:root {
+    --font-primary: "Poppins", sans-serif;
+  }
+
+/* Color */
+:root {
+    --color-default: #ffffff;
+    --color-primary: #00796b;
+    --color-secondary: #f85a40;
+    --color-black: #000000;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    background-color: var(--color-default);
+}
+
+a {
+    color: var(--color-default);
+    text-decoration: none;
+}
+
+/* Header */
+
+.navbar-brand {
+    color: var(--color-primary);
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.navbar-brand:hover {
+    color: var(--color-primary);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#navbarNav a:hover {
+    color: var(--color-primary);
+}
+
+#navbarNav .active {
+    color: var(--color-primary);
+}
+
+.navbar-toggler {
+    padding: 1px 5px;
+    font-size: 18px;
+    line-height: .3;
+    background: var(--color-default);
+}
+
+.w-100 {
+    height: 100vh;
+}
+
+/* @media only screen and (max-width: 767px){
+    .navbar-nav a {
+        font-size: 14px;
+        font-weight: 700;
+    }
+} */
+
+/* Hero */
+.carousel-item {
+    height: calc(100vh - 63px);
+    min-height: 300px;
+}
+
+.carousel-caption {
+    bottom: 220px;
+}
+
+.carousel-caption h5 {
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    font-weight: 900;
+}
+
+.carousel-caption p {
+    font-size: 18px;
+    margin: auto;
+    width: 60%;
+    line-height: 1.5;
+}
+
+.carousel-caption a {
+    text-transform: uppercase;
+    background: darkorange;
+    padding: 10px 30px;
+    display: inline-block;
+    color: var(--color-default);
+    margin-top: 15px;
+    border-radius: 50px;
+}
+
+/* About */
+.about h1 {
+    font-weight: 600;
+}
+
+.heading hr {
+    width: 15%;
+    margin: auto;
+    border-top:5px solid var(--color-primary);
+    opacity: 100%;
+    margin-top: -10px;
+}
+
+.heading p {
+    width: 80%;
+    
+}
+
+/* Services */
+.card-body .button {
+    background-color: var(--color-primary);
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+
+.card-body .button:hover {
+    color: var(--color-primary);
+    background-color: var(--color-default);
+    border: 1px solid var(--color-primary);
+}
+
+/* Portfolio */
+.overlay {
+    position: relative;
+}
+
+
+.overlay .overlay-bg {
+    position:absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.overlay .overlay-text {
+    position: absolute;
+    left: 20px;
+    bottom: 5px;
+    z-index: 3;
+
+}
+.portfolio hr {
+    width: 17%;
+}
+
+.pf {
+    border: none;
+}
+
+/* Contact */
+.contact hr {
+    width: 20%;
+}
+
+#name, #email, #message {
+    border: 2px solid var(--color-primary);
+    border-radius: 0;
+       
+}
+
+.ct-btn {
+    padding: 7px 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-default);
+    border-radius: 50px;
+}
+
+.ct-btn:hover {
+    background-color: var(--color-default);
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}

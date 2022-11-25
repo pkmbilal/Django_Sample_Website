@@ -1,12 +1,20 @@
 ---
 #Simple Ansible Playbook to build and run a Docker containers
- 
+
 - name: Playbook to build and run Docker
   hosts: all
   become: true
   gather_facts: false
- 
+
   tasks:
+    - name: Copy Project folder from Ansible Control Node to Managed Hosts
+      copy:
+        src: /home/ansadmin/docker
+        dest: /home/ansadmin
+        owner: ansadmin
+        group: ansadmin
+        mode: '0664'
+
     - name: Build a Docker image
       docker_image:
         name: webapp
@@ -14,7 +22,7 @@
           path: /home/ansadmin/docker
           pull: false
         source: build
- 
+
     - name: Run Docker container using webapp image
       docker_container:
         name: webapp

@@ -1,0 +1,26 @@
+---
+#Simple Ansible Playbook to build and run a Docker containers
+ 
+- name: Playbook to build and run Docker
+  hosts: all
+  become: true
+  gather_facts: false
+ 
+  tasks:
+    - name: Build a Docker image
+      docker_image:
+        name: webapp
+        build:
+          path: /home/ansadmin/docker
+          pull: false
+        source: build
+ 
+    - name: Run Docker container using webapp image
+      docker_container:
+        name: webapp
+        image: webapp:latest
+        state: started
+        recreate: yes
+        detach: true
+        ports:
+          - "5000:5000"
